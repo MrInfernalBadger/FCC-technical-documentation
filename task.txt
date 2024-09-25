@@ -1,0 +1,178 @@
+
+1. You can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation)
+
+2. Within the #main-doc element, you can see several section elements, each with a class of main-section. There should be a minimum of five
+
+The first element within each .main-section should be a header element, which contains text that describes the topic of that section.
+
+Each section element with the class of main-section should also have an id that corresponds with the text of each header contained within it. Any spaces should be replaced with underscores (e.g. The section that contains the header "JavaScript and Java" should have a corresponding id="JavaScript_and_Java")
+
+The .main-section elements should contain at least ten p elements total (not each)
+
+The .main-section elements should contain at least five code elements total (not each)
+
+The .main-section elements should contain at least five li items total (not each)
+
+You can see a nav element with a corresponding id="navbar"
+
+The navbar element should contain one header element which contains text that describes the topic of the technical documentation
+
+Additionally, the navbar should contain link (a) elements with the class of nav-link. There should be one for every element with the class main-section
+
+The header element in the #navbar must come before any link (a) elements in the navbar
+
+Each element with the class of nav-link should contain text that corresponds to the header text within each section (e.g. if you have a "Hello world" section/header, your navbar should have an element which contains the text "Hello world")
+
+When you click on a navbar element, the page should navigate to the corresponding section of the #main-doc element (e.g. If you click on a .nav-link element that contains the text "Hello world", the page navigates to a section element with that id, and contains the corresponding header)
+
+On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user
+
+Your technical documentation should use at least one media query
+
+Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS
+
+
+
+
+
+
+## Python Documentation
+
+### Introduction
+Python is a high-level, interpreted programming language known for its simplicity and readability. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python has an extensive standard library that helps with everything from string manipulation to networking and web services.
+
+### What You Should Already Know
+This guide assumes that you have:
+- A basic understanding of programming concepts (variables, loops, functions).
+- Some familiarity with any programming language, though prior experience with Python is not required.
+
+### Hello World
+To get started with Python, open a terminal or your preferred Python IDE and write your first "Hello world" code:
+
+```python
+print("Hello, World!")
+```
+
+Run the code by executing the script in the terminal or hitting the "Run" button in your IDE.
+
+### Variables
+In Python, variables are dynamically typed, meaning you don't need to specify the type. A variable is created when you assign a value to it:
+
+```python
+x = 42
+name = "Alice"
+```
+
+### Declaring Variables
+Python does not require you to declare variables before using them. Simply assign a value to a variable, and Python will automatically know its type.
+
+```python
+a = 10    # Integer
+b = 3.14  # Float
+c = "Text" # String
+```
+
+### Variable Scope
+Variables in Python can be local or global. A variable declared inside a function is local to that function, while a variable declared outside any function is global.
+
+```python
+x = "global"
+
+def my_function():
+    x = "local"
+    print(x)
+
+my_function()  # Outputs "local"
+print(x)       # Outputs "global"
+```
+
+### Global Variables
+To modify a global variable inside a function, use the `global` keyword:
+
+```python
+x = "global"
+
+def change_global():
+    global x
+    x = "modified"
+
+change_global()
+print(x)  # Outputs "modified"
+```
+
+### Constants
+By convention, Python does not have built-in constants, but you can declare variables with all uppercase names to indicate they should not change:
+
+```python
+PI = 3.14159
+```
+
+### Data Types
+Python has several built-in data types:
+
+- **int**: Integer values (e.g., `42`)
+- **float**: Floating-point numbers (e.g., `3.14`)
+- **str**: String values (e.g., `"Hello"`)
+- **bool**: Boolean values (`True` or `False`)
+- **list**: A mutable sequence (e.g., `[1, 2, 3]`)
+- **tuple**: An immutable sequence (e.g., `(1, 2, 3)`)
+- **dict**: Key-value pairs (e.g., `{'key': 'value'}`)
+
+### if...else Statement
+Use the `if` statement to execute code conditionally. An optional `else` statement runs if the condition is false.
+
+```python
+x = 10
+
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is 5 or less")
+```
+
+You can also use `elif` for multiple conditions:
+
+```python
+if x > 10:
+    print("x is greater than 10")
+elif x == 10:
+    print("x is 10")
+else:
+    print("x is less than 10")
+```
+
+### while Statement
+The `while` loop executes as long as a specified condition is true:
+
+```python
+count = 0
+
+while count < 3:
+    print("Count:", count)
+    count += 1
+```
+
+### Function Declarations
+In Python, functions are defined using the `def` keyword:
+
+```python
+def greet(name):
+    return "Hello, " + name
+
+print(greet("Alice"))
+```
+
+Functions can have default parameters and return values:
+
+```python
+def add(a, b=5):
+    return a + b
+
+print(add(3))       # Outputs 8
+print(add(3, 4))    # Outputs 7
+```
+
+### Reference
+All the documentation in this guide is based on Python's official documentation and community resources.

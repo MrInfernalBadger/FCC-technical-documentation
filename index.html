@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Python Documentation</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>Python Documentation</header>
+        <a class="nav-link" href="#introduction">Introduction</a>
+        <a class="nav-link" href="#what_you_should_already_know">What You Should Already Know</a>
+        <a class="nav-link" href="#hello_world">Hello World</a>
+        <a class="nav-link" href="#variables">Variables</a>
+        <a class="nav-link" href="#declaring_variables">Declaring Variables</a>
+        <a class="nav-link" href="#variable_scope">Variable Scope</a>
+        <a class="nav-link" href="#global_variables">Global Variables</a>
+        <a class="nav-link" href="#data_types">Data Types</a>
+        <a class="nav-link" href="#reference">Reference</a>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="introduction">
+            <header>Introduction</header>
+            <p>Python is a high-level, interpreted programming language known for its simplicity and readability. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming. Python has an extensive standard library that helps with everything from string manipulation to networking and web services.</p>
+        </section>
+
+        <section class="main-section" id="what_you_should_already_know">
+            <header>What You Should Already Know</header>
+            <p>This guide assumes that you have:</p>
+            <ul>
+                <li>A basic understanding of programming concepts (variables, loops, functions).</li>
+                <li>Some familiarity with any programming language, though prior experience with Python is not required.</li>                
+            </ul>
+        </section>
+
+        <section class="main-section" id="hello_world">
+            <header>Hello World</header>
+            <p>To get started with Python, open a terminal or your preferred Python IDE and write your first "Hello world" code:</p>
+            <pre><code>
+                print("Hello, World!")
+            </code></pre>
+            <p>Run the code by executing the script in the terminal or hitting the "Run" button in your IDE.</p>
+        </section>
+
+        <section class="main-section" id="variables">
+            <header>Variables</header>
+            <p>In Python, variables are dynamically typed, meaning you don't need to specify the type. A variable is created when you assign a value to it:</p>
+            <pre><code>
+                x = 42
+                name = "Alice"
+            </code></pre>
+        </section>
+
+        <section class="main-section" id="declaring_variables">
+            <header>Declaring Variables</header>
+            <p>Python does not require you to declare variables before using them. Simply assign a value to a variable, and Python will automatically know its type.</p>
+            <pre><code>
+                a = 10    # Integer
+                b = 3.14  # Float
+                c = "Text" # String
+            </code></pre>
+        </section>
+
+        <section class="main-section" id="variable_scope">
+            <header>Variable Scope</header>
+            <p>Variables in Python can be local or global. A variable declared inside a function is local to that function, while a variable declared outside any function is global.</p>
+            <pre><code>
+                x = "global"
+
+                def my_function():
+                    x = "local"
+                    print(x)
+
+                my_function()  # Outputs "local"
+                print(x)       # Outputs "global"
+            </code></pre>
+        </section>
+
+        <section class="main-section" id="global_variables">
+            <header>Global Variables</header>
+            <p>To modify a global variable inside a function, use the `global` keyword:</p>
+            <pre><code>
+                x = "global"
+
+                def change_global():
+                    global x
+                    x = "modified"
+                
+                change_global()
+                print(x)  # Outputs "modified"
+            </code></pre>
+        </section>
+
+        <section class="main-section" id="data_types">
+            <header>Data Types</header>
+            <p>Python has several built-in data types:</p>
+            <ul>
+                <li>int: Integer values (e.g., `42`)</li>
+                <li>float: Floating-point numbers (e.g., `3.14`)</li>
+                <li>str: String values (e.g., `"Hello"`)</li>
+                <li>bool: Boolean values (`True` or `False`)</li>
+                <li>list: A mutable sequence (e.g., `[1, 2, 3]`)</li>
+                <li>tuple: An immutable sequence (e.g., `(1, 2, 3)`)</li>
+                <li>dict: Key-value pairs (e.g., `{'key': 'value'}`)</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="reference">
+            <header>Reference</header>
+            <p>All the documentation in this guide is based on Python's official documentation and community resources.</p>
+        </section>
+
+
+        
+    </main>
+</body>
+</html>

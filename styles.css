@@ -1,0 +1,136 @@
+* {
+    /* outline: 1px solid rgb(233, 233, 233); */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --navbar-width: 400px;
+    --border-color: rgb(20, 20, 20);
+
+
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+#nav-bar > header {
+    font-weight: 500;
+}
+
+#main-doc header {
+    font-weight: 400;
+}
+
+
+
+body {
+    display: flex;
+}
+
+
+/* 
+##    ##    ###    ##     ## ########     ###    ########  
+###   ##   ## ##   ##     ## ##     ##   ## ##   ##     ## 
+####  ##  ##   ##  ##     ## ##     ##  ##   ##  ##     ## 
+## ## ## ##     ## ##     ## ########  ##     ## ########  
+##  #### #########  ##   ##  ##     ## ######### ##   ##   
+##   ### ##     ##   ## ##   ##     ## ##     ## ##    ##  
+##    ## ##     ##    ###    ########  ##     ## ##     ##  */
+#navbar {
+    margin-right: 16px;    
+    border-right: 2px solid var(--border-color);
+
+    display: flex;
+    flex-direction: column;
+    width: var(--navbar-width);
+
+    position: fixed;      
+    top: 0;                
+    left: 0;
+    height: 5000px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover {
+    background-color: rgb(130, 202, 202);
+}
+
+#navbar > header {
+    text-align: center;
+    margin: none;
+    font-size: 2rem;
+}
+
+#navbar > * {
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px;
+} 
+                                  
+                                  
+/*                                   
+##     ##    ###    #### ##    ## 
+###   ###   ## ##    ##  ###   ## 
+#### ####  ##   ##   ##  ####  ## 
+## ### ## ##     ##  ##  ## ## ## 
+##     ## #########  ##  ##  #### 
+##     ## ##     ##  ##  ##   ### 
+##     ## ##     ## #### ##    ##  */
+
+#main-doc {
+    margin-left: var(--navbar-width);
+    font-size: 1.25rem;
+    padding-left: 40px;
+}
+
+#main-doc :first-child {
+    padding-top: 25px;
+}
+
+
+section {
+    margin-bottom: 50px;
+}
+
+section > *:not(:first-child) {
+    padding-left: 50px;
+}
+
+ul {
+    margin-left: 60px;
+}
+
+/* 
+ ######   #######  ########  ######## 
+##    ## ##     ## ##     ## ##       
+##       ##     ## ##     ## ##       
+##       ##     ## ##     ## ######   
+##       ##     ## ##     ## ##       
+##    ## ##     ## ##     ## ##       
+ ######   #######  ########  ########  */
+
+code {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: "Courier New", monospace;
+    display: block;
+    white-space: pre;
+    margin-right: 100px;
+  }
+
+
+  @media screen and (min-width: 2000px) {
+
+    #main-doc {
+        max-width: 1200px;
+        margin: auto;
+    }
+  }
